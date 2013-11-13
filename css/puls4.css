@@ -11,7 +11,7 @@ header .logo img{width:52px}
 header .titular{margin:0 80px 0 70px;}
 header .titular .filtro{color:#22bce0;font-size:14px;font-style:italic;font-weight:bold;text-decoration:none}
 header .titular .publicar{background:#dd4f24;color:#fff;float:right;font-style:italic;padding:.2em .5em;text-decoration:none;text-shadow:1px 1px 0 #000;}
-header .titular .publicar:before{content:"\e600";font-family:"iconitos"}
+header .titular .publicar:before{content:"\e600";display:inline-block;font-family:"iconitos";margin:0 3px 0 0;text-shadow:none}
 header .titular .titulo{font-size:18px;font-weight:normal;margin:0;padding:0}
 header .usuario{position:absolute;top:10px;right:10px;}
 header .usuario .avatar{margin:0 1.1em 0 0;position:relative;z-index:2;}
@@ -21,11 +21,12 @@ header .usuario .flechita:after{content:"\e602";display:block;font-family:"iconi
 nav{background:#22bce0;border-left:15px solid #fff;position:relative;}
 nav:before{border-bottom:20px solid transparent;border-left:7px solid #fff;border-top:20px solid transparent;content:"";left:0;position:absolute;top:0}
 nav .menu{height:40px;line-height:40px;margin:0;padding:0;overflow-x:auto;white-space:nowrap;}
+nav .menu::-webkit-scrollbar{display:none}
 nav .menu li{display:inline-block;}
 nav .menu li a{color:#fff;display:block;margin:0 .5em;padding:0 .2em;text-decoration:none;}
 nav .menu li a:hover{background:rgba(0,0,0,0.1)}
 .posts{padding:.5em;}
-.posts .post{background:#fff;border-radius:0 0 .5em .5em;box-shadow:2px 2px 10px rgba(0,0,0,0.5);color:#7a7a7a;}
+.posts .post{background:#fff;border-radius:0 0 .5em .5em;box-shadow:2px 2px 10px rgba(0,0,0,0.5);color:#7a7a7a;margin-bottom:.5em;}
 .posts .post .acciones{border-top:3px solid #22bce0;padding:.5em;overflow:hidden;}
 .posts .post .acciones .datos{float:right;}
 .posts .post .acciones .datos .comentarios{background:#444;border-radius:3px;color:#fff;margin:0 1em 0 0;padding:2px 5px;text-decoration:none}
@@ -45,5 +46,8 @@ nav .menu li a:hover{background:rgba(0,0,0,0.1)}
 .posts .post .descripcion .detalles .titulo{color:#444;font-size:18px;font-style:italic;margin:0;padding:.5em .5em 0 0}
 .posts .post .descripcion .imagen{float:left;}
 .posts .post .descripcion .imagen img{height:160px;vertical-align:top;width:120px}
-.left{float:left}
-.right{float:right}
+@media screen and (min-width: 768px){header .titular .publicar{font-size:1.1em;padding-left:3em;position:relative;}
+header .titular .publicar:before{left:0;font-size:2.5em;position:absolute;top:-10px}
+.posts .post{display:inline-block;width:48%;vertical-align:top;}
+.posts .post:nth-child(odd){margin-right:2%}
+}
