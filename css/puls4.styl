@@ -3,6 +3,17 @@ naranja = #DD4F24
 gris_oscuro = #444
 gris_texto = #7A7A7A
 
+@font-face {
+	font-family: 'iconitos';
+	src:url('../fonts/icomoon.eot');
+	src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.ttf') format('truetype'),
+		url('../fonts/icomoon.woff') format('woff'),
+		url('../fonts/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
 a
 	color naranja
 
@@ -11,6 +22,25 @@ body
 	color gris_oscuro
 	font-family Arial
 	font-size 16px
+
+footer
+	background naranja
+	color rgba(white, 0.5)
+	padding 1em 0
+	text-align center
+	width 100%
+
+	h3
+		font-size 14px
+		font-weight normal
+
+		strong
+			display block
+
+		.mejor
+			&:after
+			&:before
+				content " - "
 
 header
 	background gris_oscuro
@@ -47,6 +77,10 @@ header
 			text-decoration none
 			text-shadow 1px 1px 0px black
 
+			&:before
+				content "\e600"
+				font-family "iconitos"
+
 		.titulo
 			font-size 18px
 			font-weight normal
@@ -79,6 +113,13 @@ header
 			top 15px
 			width 50%
 			z-index 0
+
+			&:after
+				content "\e602"
+				display	block
+				font-family "iconitos"
+				margin 1px 0 0 1px
+				text-shadow 1px 1px 0px black
 
 nav
 	background azul
@@ -127,8 +168,75 @@ nav
 		.acciones
 			border-top 3px solid azul
 			padding 0.5em
+			overflow hidden
+
+			.datos
+				float right
+
+				.comentarios
+					background gris_oscuro
+					border-radius 3px
+					color white
+					margin 0 1em 0 0
+					padding 2px 5px
+					text-decoration none
+
+				.estrellita
+					text-decoration none
+					&:after
+						color #FCB92D
+						content "\e601"
+						font-family "iconitos"
+						font-size 1.1em
+
+			.votos
+				float left
+
+				.down
+				.up
+					text-decoration none
+					&:before
+						font-family "iconitos"
+						font-size 1.5em
+						vertical-align middle
+
+				.down
+					color red
+					&:before
+						content "\e602"
+
+				.up
+					color green
+					&:before
+						content "\e603"
 
 		.descripcion
+
+			.detalles
+				height 160px
+				margin-left 130px
+
+				.autor
+					margin 0.5em 0 2em 0
+
+				.fecha
+					float right
+					margin 0 1em 0 0
+
+				.tag 
+					background azul
+					border-radius 0.5em
+					color white
+					padding 0.2em 0.5em
+					text-decoration none
+
+
+				.titulo
+					color gris_oscuro
+					font-size 18px
+					font-style italic
+					margin 0
+					padding 0.5em 0.5em 0 0
 
 			.imagen
 				float left
